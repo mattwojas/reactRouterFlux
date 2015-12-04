@@ -5,7 +5,6 @@ var Router = require('react-router');
 var Link = Router.Link;
 var AuthorActions = require('../../actions/authorActions');
 var toastr = require('toastr');
-var TimeAgo = require('../../../react-components/js/timeago.jsx');
 
 var AuthorList = React.createClass({
 	propTypes: {
@@ -25,8 +24,7 @@ var AuthorList = React.createClass({
 				<tr key={author.id}>
 				<td><a href="#" onClick={this.deleteAuthor.bind(this, author.id)}>Delete</a></td>
 				<td><Link to="manageAuthor" params={{id: author.id}}>{author.id}</Link></td>
-				<td>{author.firstName} {author.lastName}</td>
-				<td> <TimeAgo time={author.date} /></td>
+				<td>{author.firstName} {author.lastName}</td>			
 				</tr>
 			);
 		};
@@ -37,8 +35,7 @@ var AuthorList = React.createClass({
 					<thead>
 					<th></th>
 					<th>ID</th>
-					<th>Name</th>
-					<th>time</th>
+					<th>Name</th>					
 					</thead>
 					<tbody>
 						{this.props.authors.map(createAuthorRow, this)}
