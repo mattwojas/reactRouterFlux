@@ -14,7 +14,7 @@ var rename = require('gulp-rename');	// renames things.
 
 
 var config = {
-	port: 9905,
+	port: 9906,
 	devBaseUrl: 'http://localhost',
 	paths:{
 		html: './src/*.html',
@@ -23,7 +23,8 @@ var config = {
 		css: [
 			'node_modules/bootstrap/dist/css/bootstrap.min.css',
 			'node_modules/bootstrap/dist/css/bootstrap-theme.min.css', 
-			'node_modules/toastr/build/toastr.css'
+			'node_modules/toastr/build/toastr.css',
+			'src/styles/*.css'
 		],
 		dist: './dist', 
 		mainJs: './src/main.js'
