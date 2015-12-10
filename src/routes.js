@@ -22,6 +22,7 @@ var routes = (
 		<Redirect from="about/*" to="about" />
 
 		<Route name="info" handler={require('./components/info/infoPage')} />
+		<Route name="todo" handler={require('./components/Todo/TodoPage')} />
 
 		<Route name="courses" handler={require('./components/courses/coursePage')} />
 		<Route name="addCourse" path="course" handler={require('./components/courses/ManageCoursePage')} />
